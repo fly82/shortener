@@ -3,7 +3,7 @@ package com.javarush.task.task33.task3310.strategy;
 import org.apache.commons.collections4.bidimap.DualHashBidiMap;
 
 public class DualHashBidiMapStorageStrategy implements StorageStrategy {
-    DualHashBidiMap data = new DualHashBidiMap();
+    private DualHashBidiMap data = new DualHashBidiMap();
     @Override
     public boolean containsKey(Long key) {
         return data.containsKey(key);

@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class FileBucket {
-    Path path;
+    private Path path;
 
     public FileBucket() {
         try {
@@ -47,9 +47,7 @@ public class FileBucket {
 
         try (ObjectInputStream objectInputStream = new ObjectInputStream(Files.newInputStream(path))) {
             entry = (Entry) objectInputStream.readObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -3,7 +3,7 @@ package com.javarush.task.task33.task3310.strategy;
 import com.google.common.collect.HashBiMap;
 
 public class HashBiMapStorageStrategy implements StorageStrategy {
-    HashBiMap<Long, String> data = HashBiMap.create();
+    private HashBiMap<Long, String> data = HashBiMap.create();
     @Override
     public boolean containsKey(Long key) {
         return data.containsKey(key);
